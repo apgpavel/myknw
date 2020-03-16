@@ -39,6 +39,9 @@ class CheckC:
 
     def __eq__(self, other):
         return self.zc == other.zc and self.yc == other.yc and self.xc == other.xc
+    
+    def __neg__(self):
+        return -self.xc, -self.yc, -self.zc
 
     def printline(self):
         position = [self.xc, self.yc, self.zc]
