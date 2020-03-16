@@ -52,6 +52,8 @@ print(test3.getX(), test3.getY(), test3.getZ())
 print(test4.getX(), test4.getY(), test4.getZ())
 print(test1.printline())
 test1.setX(10)
+test1.setY(20)
+test1.setZ(30)
 print(test1.printline())
 test5 = test1 * test1
 print(test5.getX(), test5.getY(), test5.getZ())
