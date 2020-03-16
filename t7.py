@@ -60,3 +60,4 @@ test1.setZ(30)
 print(test1.printline())
 test5 = test1 * test1
 print(test5.getX(), test5.getY(), test5.getZ())
+print(-test5)
