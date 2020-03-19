@@ -1,6 +1,6 @@
 class CheckC:
 
-    def __init__(self, xc=0, yc=0, zc=0):
+    def __init__(self, xc, yc, zc):
         self.xc = xc
         self.yc = yc
         self.zc = zc
@@ -28,16 +28,16 @@ class CheckC:
 
     """change magic ang ariphmetic method"""
     def __add__(self, other):
-        return self.xc + other.xc, self.yc + other.yc, self.zc + other.zc
+        return CheckC(self.xc + other.xc, self.yc + other.yc, self.zc + other.zc)
 
     def __sub__(self, other):
-        return self.xc - other.xc, self.yc - other.yc, self.zc - other.zc
+        return CheckC(self.xc - other.xc, self.yc - other.yc, self.zc - other.zc)
 
     def __mul__(self, other):
-        return self.xc * other.xc, self.yc * other.yc, self.zc * other.zc
+        return CheckC(self.xc * other.xc, self.yc * other.yc, self.zc * other.zc)
 
     def __truediv__(self, other):
-        return self.xc / other.xc, self.yc / other.yc, self.zc / other.zc
+        return CheckC(self.xc / other.xc, self.yc / other.yc, self.zc / other.zc)
 
     def __eq__(self, other):
         return self.zc == other.zc and self.yc == other.yc and self.xc == other.xc
@@ -55,14 +55,7 @@ class CheckC:
 test1 = CheckC(1, 2, 3)
 test2 = CheckC(2, 4, 6)
 
-print(test1.displayinfo())
-print(test2.displayinfo())
-test3 = test1 + test2
+test3 = test1 + test2 + test2
 test4 = test1 * test1
-print(test3)
-print(test4)
-print(test1.getX())
-print(test3[0], test3[1], test3[2])
-print(test4[0], test4[1], test4[2])
-print(test1.printline())
-print(-test2)
+
+print(test3.xc, test3.yc, test3.zc)
