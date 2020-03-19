@@ -1,4 +1,4 @@
-class CheckC(object):
+class CheckC:
 
     def __init__(self, xc=0, yc=0, zc=0):
         self.xc = xc
