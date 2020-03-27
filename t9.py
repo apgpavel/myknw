@@ -54,8 +54,11 @@ test3.append(10)
 test3.append(11)
 test3.append(12)
 
-while 0 < len(test3):
+while True:
+  try:
     print(test3.pop())
+  except IndexError:
+    break
 
 # # Type 3 Queue with class LifoQueue
 test4 = LifoQueue()
