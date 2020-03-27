@@ -22,7 +22,7 @@ class Complex:
         return Complex(com_a, com_b)
 
     def __sub__(self, other):
-        '''Операция вычетания'''
+        '''Операция вычитания'''
         com_a = self.a - other.a
         com_b = self.b - other.b
         return Complex(com_a, com_b)
